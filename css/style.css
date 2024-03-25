@@ -1,0 +1,152 @@
+@keyframes logo-anim {
+    from {opacity: 0; width: 25px;}
+    to {opacity: 1; width: 475px;}
+  }
+  
+  /* The element to apply the animation to */
+  #logo {
+    animation-name: logo-anim;
+    animation-duration: 5s;
+  }
+  body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image:  url("concrete_seamless.png");
+    background-color: #f1f1f1;
+  }
+  header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav_links li a:visited{
+    color: #0000EE;
+  }
+.card > header{
+    background: #288088;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #45ADAD;
+    padding: 20px 0px 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+    flex: 1 1 auto;
+     width: 450px;
+}
+.card{
+    display: flex;
+    flex: 1 1 auto;
+    width: 450px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px 50px 0px 0px;
+}
+.pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery > img{
+    border-style: solid;
+    border-width: 10px;
+    border-color: #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (min-width: 900px) {
+    header{
+        display: flex;
+        flex-direction: row;
+      }
+      header > img{
+        margin-right: auto;
+      }
+      .nav_links{
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+      }
+      .pricing{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .card{
+        flex: 1 1 auto;
+        width: 275px;
+    }
+    .card > header{
+        width: 100%;
+    }
+    body > header:first-of-type{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #logo {
+      animation: none !important;
+    }
+  }
+  @media print {
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: none;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+      }
+      .pricing{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .card{
+        flex: 1 1 auto;
+        width: 325px;
+        flex-basis: 325px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #45ADDD;
+        align-items: center;
+        justify-content: center;
+    }
+    .card > header{
+        width: 100%;
+    }
+    .gallery{
+        visibility: hidden;
+    }
+    #gallery{
+        visibility: hidden;
+    }
+    .card > li:nth-child(2)::after {
+        content: "U+1F44D"; /* Unicode character for thumbs-up emoji */
+        font-size: 24px;
+        margin-left: 5px; /* Add some spacing between the list item text and the emoji */
+      }
+  }
+  
